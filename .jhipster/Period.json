@@ -1,0 +1,61 @@
+{
+    "name": "Period",
+    "fields": [
+        {
+            "fieldName": "beginDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "duration",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "taxable",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "zakat",
+            "otherEntityRelationshipName": "period",
+            "relationshipName": "zakat",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "balance",
+            "otherEntityRelationshipName": "period",
+            "relationshipName": "balances"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "userExtra",
+            "otherEntityRelationshipName": "periods",
+            "relationshipName": "userExtra",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200221085100",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "period",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

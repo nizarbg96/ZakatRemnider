@@ -1,0 +1,42 @@
+{
+    "name": "UserExtra",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "bankAccount",
+            "otherEntityRelationshipName": "userExtra",
+            "relationshipName": "bankAccount",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "period",
+            "otherEntityRelationshipName": "userExtra",
+            "relationshipName": "periods"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "zakat",
+            "otherEntityRelationshipName": "userExtra",
+            "relationshipName": "zakats"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "beneficiary",
+            "otherEntityRelationshipName": "userExtra",
+            "relationshipName": "beneficiarys"
+        }
+    ],
+    "changelogDate": "20200221084900",
+    "entityTableName": "user_extra",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
